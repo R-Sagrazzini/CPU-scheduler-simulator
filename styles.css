@@ -1,0 +1,23 @@
+:root {
+    --bg-primary: $purple-500;
+}
+
+.body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.div-header-principale{
+    width: 100%;
+    height: 60px;
+    background-color: white;
+}
+.header-principale{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    color: rgb(32, 32, 32);
+}
