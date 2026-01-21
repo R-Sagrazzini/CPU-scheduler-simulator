@@ -29,26 +29,50 @@
             </thead>
             <tbody id="processTableBody" >
                 <tr>
-                    <td>P1</td>
+                    <td style="text-align: center; vertical-align: middle;"><b>P1</b></td>
                     <td><input type="number" class="form-control table-input" min="0" value="0"></td>
                     <td><input type="number" class="form-control table-input" min="0" value="0"></td>
                     <td><input type="number" class="form-control table-input" min="0" value="0"></td>
                 </tr>
                 <tr>
-                    <td>P2</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td style="text-align: center; vertical-align: middle;"><b>P2</b></td>
+                    <td><input type="number" class="form-control table-input" min="0" value="0"></td>
+                    <td><input type="number" class="form-control table-input" min="0" value="0"></td>
+                    <td><input type="number" class="form-control table-input" min="0" value="0"></td>
                 </tr>
                 <tr>
-                    <td>P3</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td style="text-align: center; vertical-align: middle;"><b>P3</b></td>
+                    <td><input type="number" class="form-control table-input" min="0" value="0"></td>
+                    <td><input type="number" class="form-control table-input" min="0" value="0"></td>
+                    <td><input type="number" class="form-control table-input" min="0" value="0"></td>
                 </tr>
-                <!-- Process rows will be dynamically added here -->
-            </tbody>
-        </table>
+            </tbody>            
+        </table> 
+    </div>
+    <!--Selettore time slice, aggiunta processi pulsante reset e start-->
+    <div class="container my-4" id="roundRobinContainer">
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2 class="display-6 text-primary">Round Robin Scheduling</h2>
+                <p class="lead">
+                    <strong>Round Robin</strong> is a preemptive scheduling algorithm where each process is assigned a fixed time unit called a <em>Time Slice</em>. It ensures fairness by cycling through all processes.
+                </p>
+            </div>
+        </div>
+    
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <label for="timeSliceInput" class="fw-bold">Time Slice:</label>
+            </div>
+            <div class="col-auto">
+                <input type="number" id="timeSliceInput" class="form-control" style="width: 80px;" min="1" value="4">
+            </div>
+            <div class="col-auto ms-md-auto"> 
+                <button id="addProcessBtn" class="btn btn-secondary">Add Process</button>
+                <button id="resetBtn" class="btn btn-warning">Reset</button>
+                <button id="startBtn" class="btn btn-success">Start Simulation</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>
