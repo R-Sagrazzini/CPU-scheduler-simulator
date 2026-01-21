@@ -1,18 +1,54 @@
+<!--Esempio di scheduler https://ravipatel1309.github.io/CPUScheduler/-->
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cpu-Scheduler-Simulator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header class="bg-primary text-white text-center py-4 mb-4">
         <h1>Cpu-Scheduler-Simulator</h1>
     </header>
+    <!--Table for processes-->
+    <div class="container">
+        <table class="table table-bordered table-striped border-primary">
+            <thead class="table table-bordered border-primary">
+                <tr>
+                    <th>Process ID</th>
+                    <th>Arrival Time</th>
+                    <th>Burst Time</th>
+                    <th>Priority</th>
+                </tr>
+            </thead>
+            <tbody id="processTableBody" >
+                <tr>
+                    <td>P1</td>
+                    <td><input type="number" class="form-control table-input" min="0" value="0"></td>
+                    <td><input type="number" class="form-control table-input" min="0" value="0"></td>
+                    <td><input type="number" class="form-control table-input" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>P2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>P3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- Process rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
 </body>
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<!-- Custom CSS -->
-<link href="styles.css" rel="stylesheet">
 </html>

@@ -1,6 +1,27 @@
 :root {
-    --bg-primary: $purple-500;
+    /*Primary color*/
+    --bs-primary: #8604a7;
+    --bs-primary-rgb: 134, 4, 167;
 }
+/*Table styles*/
+.table th, .table td{
+    border: 2px solid var(--bs-primary);
+    --bs-table-striped-bg: #8604a741;
+    --bs-table-striped-color: #000000;
+}
+.table td {
+  padding: 0; /* elimina spazio intorno all'input */
+}
+
+.table-input {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+}
+
 
 .body{
     margin: 0;
