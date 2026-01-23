@@ -1,4 +1,4 @@
-<!--Esempio di scheduler https://ravipatel1309.github.io/CPUScheduler/-->
+<!--Esempio di scheduler https://ravipatel1309.github.io/CPUScheduler/ -->
 
 <!DOCTYPE html>
 <html lang="it">
@@ -16,7 +16,7 @@
     <header class="bg-primary text-white text-center py-4 mb-4">
         <h1>Cpu-Scheduler-Simulator</h1>
     </header>
-    <!--Table for processes-->
+    <!--tabella dei processi-->
     <div class="container">
         <table class="table table-bordered table-striped border-primary">
             <thead class="table table-bordered border-primary">
@@ -46,13 +46,15 @@
                     <td><input type="number" class="form-control table-input" min="0" value="0"></td>
                     <td><input type="number" class="form-control table-input" min="0" value="0"></td>
                 </tr>
+                <!-- Processi aggiunti tramite js successivamente-->
             </tbody>            
         </table> 
     </div>
-    <!--Selettore time slice, aggiunta processi pulsante reset e start-->
+    <!--Selettore time slice, aggiunta processi, reset e start-->
     <div class="container my-4" id="roundRobinContainer">
         <div class="row mb-4">
             <div class="col-12">
+                <!--Piccola spiegazione round robin-->
                 <h2 class="display-6 text-primary">Round Robin Scheduling</h2>
                 <p class="lead">
                     <strong>Round Robin</strong> is a preemptive scheduling algorithm where each process is assigned a fixed time unit called a <em>Time Slice</em>. It ensures fairness by cycling through all processes.
@@ -61,18 +63,57 @@
         </div>
     
         <div class="row g-3 align-items-center">
+            <!--Input time slice-->
             <div class="col-auto">
                 <label for="timeSliceInput" class="fw-bold">Time Slice:</label>
             </div>
             <div class="col-auto">
                 <input type="number" id="timeSliceInput" class="form-control" style="width: 80px;" min="1" value="4">
             </div>
+            <!--Bottoni-->
             <div class="col-auto ms-md-auto"> 
-                <button id="addProcessBtn" class="btn btn-secondary">Add Process</button>
-                <button id="resetBtn" class="btn btn-warning">Reset</button>
+                <button id="addProcessBtn" class="btn btn-secondary" onclick="addProcess()">Add Process (max 10)</button>
+                <button id="removeProcessBtn" class="btn btn-secondary" onclick="removeProcess()">Remove Process (min 3)</button>
+                <button id="resetBtn" class="btn btn-warning" onclick="reset()">Reset</button>
                 <button id="startBtn" class="btn btn-success">Start Simulation</button>
             </div>
         </div>
     </div>
+    <!--Diagramma di Gantt-->
+    
+    <!--Tabella risultato processi-->
+
+    <div class="container my-5">
+        <h2 class="display-6 text-primary" id="tabellaRisultati">Table of Results</h2>
+        <table class="table table-bordered border-primary table-striped text-center align-middle">
+            <!--header della tabella risultati-->
+            <thead class="table table-bordered border-primary">
+                <tr>
+                    <th>Process ID</th>
+                    <th>Arrival Time</th>
+                    <th>Burst Time</th>
+                    <th>Completion Time (CT)</th>
+                    <th>Turnaround Time (TAT)</th>
+                    <th>Waiting Time (WT)</th>
+                </tr>
+            </thead>
+            <!--corpo della tabella risultati-->
+            <tbody id="resultTableBody">
+                <tr>
+                    <td colspan="6" class="text-muted">I risultati appariranno dopo la simulazione</td>
+                </tr>
+            </tbody>
+            <!--Footer della tabella risultati-->
+            <tfoot id="resultTableFoot" class="table-light d-none">
+                <tr class="fw-bold">
+                    <td colspan="4" class="text-end">Medie:</td>
+                    <td id="avgTATText" class="text-primary">0</td>
+                    <td id="avgWTText" class="text-primary">0</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
 </body>
+<!-- JavaScript -->
+<script src="script.js"></script>
 </html>
