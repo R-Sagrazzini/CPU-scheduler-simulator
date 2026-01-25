@@ -62,7 +62,7 @@
             </div>
         </div>
     
-        <div class="row g-3 align-items-center">
+        <div class="row g-3 align-items-center justify-content-center mb-3">
             <!--Input time slice-->
             <div class="col-auto">
                 <label for="timeSliceInput" class="fw-bold">Time Slice:</label>
@@ -70,8 +70,17 @@
             <div class="col-auto">
                 <input type="number" id="timeSliceInput" class="form-control" style="width: 80px;" min="1" value="4">
             </div>
-            <!--Bottoni-->
-            <div class="col-auto ms-md-auto"> 
+            <!--Cambio di contesto-->
+            <div class="col-auto">
+                <label for="contextSwitchInput" class="fw-bold">Context Switch Time:</label>
+            </div>
+            <div class="col-auto">
+                <input type="number" id="contextSwitchInput" class="form-control" style="width: 80px;" min="0" value="2">
+            </div>
+        </div>
+        <!--Bottoni-->
+        <div class="row g-3 align-items-center justify-content-center">
+            <div class="col-auto">
                 <button id="addProcessBtn" class="btn btn-secondary" onclick="addProcess()">Add Process (max 10)</button>
                 <button id="removeProcessBtn" class="btn btn-secondary" onclick="removeProcess()">Remove Process (min 3)</button>
                 <button id="resetBtn" class="btn btn-warning" onclick="reset()">Reset</button>
@@ -100,7 +109,7 @@
             <!--corpo della tabella risultati-->
             <tbody id="resultTableBody">
                 <tr>
-                    <td colspan="6" class="text-muted">I risultati appariranno dopo la simulazione</td>
+                    <td colspan="6" class="text-muted">The results will appear after the simulation</td>
                 </tr>
             </tbody>
             <!--Footer della tabella risultati-->
